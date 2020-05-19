@@ -1,3 +1,7 @@
+<?php
+    require_once("controller/LoginController.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +10,11 @@
     <title>Login</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="controller/LoginController.php" method="post">
         <input type="text" name="txtLogin" value="admin" placeholder="Login:" required />
         <input type="password" name="txtPassword" value="12345" placeholder="Password" required />
         <input type="submit" value="Login">
     </form>
 </body>
 </html>
+
