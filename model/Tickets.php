@@ -16,10 +16,8 @@ class Tickets
         $tickets = $this->getAllTickets();
         $tickets = $tickets[$id];
         
-        foreach ($tickets as $index => $ticket) {
-            $tickets[$index]["id_status"] = $this->getStatus($ticket["id_status"]);
-        }
-        
+        $tickets["id_status"] = $this->getStatus($tickets["id_status"]);
+
         return $tickets;
     }
 

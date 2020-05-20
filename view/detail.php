@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem</title>
+    <title>Detalhe do Ticket</title>
     <style>
         th {
             text-align: center;
@@ -30,19 +30,25 @@
     <table style="width: 100%">
         <thead>
             <tr>
-                <th colspan="5">Tickets*</th>
+                <th colspan="4">Visualização de Ticket</th>
             </tr>
             <tr>
-                <th></th>
-                <th>Tickets</th>
+                <th>Ticket</th>
                 <th>Status</th>
                 <th>Data</th>
                 <th>Título</th>
             </tr>
         </thead>
         <tbody>
-            <?php $ticketController->index(); ?>
+            <?php $ticketController->show($_GET["ticket_id"]); ?>
         </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">
+                    <a href="/controller/TicketsController.php?action=list">Retornar</a>
+                </th>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
